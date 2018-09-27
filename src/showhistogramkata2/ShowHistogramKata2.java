@@ -4,8 +4,8 @@ import java.util.*;
 
 public class ShowHistogramKata2 {
     
-    Integer[] data = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
-    Map<Integer,Integer> histogr;
+    String[] data = {"Rosa", "Pepe", "María", "Pepe", "Pepe", "Rosa"};
+    Map<String,Integer> histogr;
 
     public static void main(String[] args) {
         ShowHistogramKata2 showhistogram = new ShowHistogramKata2();
@@ -13,15 +13,8 @@ public class ShowHistogramKata2 {
     }
     
     private void control() {
-        input();
         process();
         output();
-    }
-    
-    private void input() {
-        for (int i = 0; i < data.length; i++) {
-            data[i] = (int) Math.floor(Math.random()*10+1);
-        }
     }
 
     private void process() {
@@ -30,7 +23,7 @@ public class ShowHistogramKata2 {
     }
 
     private void output() {
-        for (Integer key : histogr.keySet()) {
+        for (String key : histogr.keySet()) {
             System.out.println(key + " ===> " + histogr.get(key));
         }
     }
