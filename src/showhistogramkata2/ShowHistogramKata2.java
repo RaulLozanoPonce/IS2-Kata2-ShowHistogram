@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ShowHistogramKata2 {
     
-    int[] data = new int[20];
+    Integer[] data = {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
     Map<Integer,Integer> histogr;
 
     public static void main(String[] args) {
