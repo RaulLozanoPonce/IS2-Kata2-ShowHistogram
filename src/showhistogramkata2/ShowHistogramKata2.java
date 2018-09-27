@@ -31,7 +31,7 @@ public class ShowHistogramKata2 {
 
     private void output() {
         for (Integer key : histogr.keySet()) {
-            System.out.println(key + " ==> " + histogr.get(key));
+            System.out.println(key + " ===> " + histogr.get(key));
         }
     }
     
