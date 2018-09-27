@@ -4,8 +4,8 @@ import java.util.*;
 
 public class ShowHistogramKata2 {
     
-    Map<Integer,Integer> histogram = new HashMap<>();
     int[] data = new int[20];
+    Map<Integer,Integer> histogr;
 
     public static void main(String[] args) {
         ShowHistogramKata2 showhistogram = new ShowHistogramKata2();
@@ -25,14 +25,13 @@ public class ShowHistogramKata2 {
     }
 
     private void process() {
-        for (int key : data) {
-            histogram.put(key, histogram.containsKey(key) ? histogram.get(key) + 1 : 1);
-        }
+        Histogram histo = new Histogram(data);
+        histogr = histo.getHistogram();
     }
 
     private void output() {
-        for (Integer key : histogram.keySet()) {
-            System.out.println(key + " ==> " + histogram.get(key));
+        for (Integer key : histogr.keySet()) {
+            System.out.println(key + " ==> " + histogr.get(key));
         }
     }
     
